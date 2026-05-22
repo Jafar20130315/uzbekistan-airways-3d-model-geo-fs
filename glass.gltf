@@ -1,0 +1,371 @@
+{
+    "accessors": {
+        "accessor_21": {
+            "bufferView": "bufferView_29",
+            "byteOffset": 0,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 3126,
+            "max": [
+                420
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_23": {
+            "bufferView": "bufferView_30",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 813,
+            "max": [
+                0.596061,
+                2.14237,
+                1.78043
+            ],
+            "min": [
+                -0.596061,
+                -0.751946,
+                1.26626
+            ],
+            "type": "VEC3"
+        },
+        "accessor_25": {
+            "bufferView": "bufferView_30",
+            "byteOffset": 9756,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 813,
+            "max": [
+                0.992852,
+                0.944305,
+                0.962593
+            ],
+            "min": [
+                -0.992852,
+                -0.99929,
+                -0.972944
+            ],
+            "type": "VEC3"
+        },
+        "accessor_27": {
+            "bufferView": "bufferView_30",
+            "byteOffset": 19512,
+            "byteStride": 8,
+            "componentType": 5126,
+            "count": 813,
+            "max": [
+                0.968555,
+                0.99
+            ],
+            "min": [
+                0.01,
+                0.0988264
+            ],
+            "type": "VEC2"
+        }
+    },
+    "animations": {},
+    "asset": {
+        "generator": "collada2gltf@6779c094d694e951beeb1012d03d4faa1edb0ddf",
+        "premultipliedAlpha": true,
+        "profile": {
+            "api": "WebGL",
+            "version": "1.0.2"
+        },
+        "version": "1.0.1"
+    },
+    "bufferViews": {
+        "bufferView_29": {
+            "buffer": "glass",
+            "byteLength": 6252,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        "bufferView_30": {
+            "buffer": "glass",
+            "byteLength": 26016,
+            "byteOffset": 6252,
+            "target": 34962
+        }
+    },
+    "buffers": {
+        "glass": {
+            "byteLength": 32268,
+            "type": "arraybuffer",
+            "uri": "glass.bin"
+        }
+    },
+    "images": {
+        "reflection_jpg": {
+            "name": "reflection_jpg",
+            "uri": "../../../../shaders/reflection.jpg"
+        }
+    },
+    "materials": {
+        "glass": {
+            "name": "glass",
+            "technique": "technique0",
+            "values": {
+                "ambient": [
+                    0.152941,
+                    0.152941,
+                    0.0980392,
+                    1
+                ],
+                "diffuse": [
+                    0.152941,
+                    0.152941,
+                    0.0980392,
+                    1
+                ],
+                "emission": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "reflective": "texture_reflection_jpg",
+                "shininess": 20,
+                "specular": [
+                    0.855,
+                    0.855,
+                    0.855,
+                    1
+                ],
+                "transparency": 0.3
+            }
+        }
+    },
+    "meshes": {
+        "geom-glass": {
+            "name": "glass",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_25",
+                        "POSITION": "accessor_23",
+                        "TEXCOORD_0": "accessor_27"
+                    },
+                    "indices": "accessor_21",
+                    "material": "glass",
+                    "mode": 4
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "node-glass": {
+            "children": [
+                "node_2"
+            ],
+            "matrix": [
+                1,
+                -4.46586e-009,
+                -1.19209e-007,
+                0,
+                -4.46587e-009,
+                0.897833,
+                -4.46585e-009,
+                0,
+                2.08616e-007,
+                -4.46585e-009,
+                1,
+                0,
+                3.83973e-007,
+                -0.269325,
+                0.409,
+                1
+            ],
+            "name": "glass"
+        },
+        "node_0": {
+            "children": [],
+            "name": "EnvironmentAmbientLight"
+        },
+        "node_2": {
+            "children": [],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                -5.96046e-008,
+                -0.695215,
+                -1.52335,
+                1
+            ],
+            "meshes": [
+                "geom-glass"
+            ],
+            "name": ""
+        },
+        "node_3": {
+            "children": [
+                "node_0",
+                "node-glass"
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "Y_UP_Transform"
+        }
+    },
+    "programs": {
+        "program_0": {
+            "attributes": [
+                "a_normal",
+                "a_position"
+            ],
+            "fragmentShader": "glass0FS",
+            "vertexShader": "glass0VS"
+        }
+    },
+    "samplers": {
+        "sampler_0": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "node_3"
+            ]
+        }
+    },
+    "shaders": {
+        "glass0FS": {
+            "type": 35632,
+            "uri": "../../../../shaders/glassFS.glsl"
+        },
+        "glass0VS": {
+            "type": 35633,
+            "uri": "../../../../shaders/baseVS.glsl"
+        }
+    },
+    "skins": {},
+    "techniques": {
+        "technique0": {
+            "attributes": {
+                "a_normal": "normal",
+                "a_position": "position"
+            },
+            "parameters": {
+                "ambient": {
+                    "type": 35666
+                },
+                "diffuse": {
+                    "type": 35666
+                },
+                "emission": {
+                    "type": 35666
+                },
+                "modelViewMatrix": {
+                    "semantic": "MODELVIEW",
+                    "type": 35676
+                },
+                "normal": {
+                    "semantic": "NORMAL",
+                    "type": 35665
+                },
+                "normalMatrix": {
+                    "semantic": "MODELVIEWINVERSETRANSPOSE",
+                    "type": 35675
+                },
+                "position": {
+                    "semantic": "POSITION",
+                    "type": 35665
+                },
+                "projectionMatrix": {
+                    "semantic": "PROJECTION",
+                    "type": 35676
+                },
+                "reflective": {
+                    "type": 35678
+                },
+                "shininess": {
+                    "type": 5126
+                },
+                "specular": {
+                    "type": 35666
+                },
+                "transparency": {
+                    "type": 5126
+                }
+            },
+            "program": "program_0",
+            "states": {
+                "enable": [
+                    2929,
+                    3042
+                ],
+                "functions": {
+                    "blendEquationSeparate": [
+                        32774,
+                        32774
+                    ],
+                    "blendFuncSeparate": [
+                        1,
+                        771,
+                        1,
+                        771
+                    ],
+                    "depthMask": [
+                        false
+                    ]
+                }
+            },
+            "uniforms": {
+                "u_ambient": "ambient",
+                "u_diffuse": "diffuse",
+                "u_emission": "emission",
+                "u_modelViewMatrix": "modelViewMatrix",
+                "u_normalMatrix": "normalMatrix",
+                "u_projectionMatrix": "projectionMatrix",
+                "u_reflective": "reflective",
+                "u_shininess": "shininess",
+                "u_specular": "specular",
+                "u_transparency": "transparency"
+            }
+        }
+    },
+    "textures": {
+        "texture_reflection_jpg": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "reflection_jpg",
+            "target": 3553,
+            "type": 5121
+        }
+    }
+}
